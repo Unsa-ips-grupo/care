@@ -224,7 +224,7 @@ class ScheduleViewSet(EMRModelViewSet):
             resource_obj,
             self.request.user,
         ):
-            raise PermissionDenied("You do not have permission to update schedule")
+            raise PermissionDenied("You do not have permission to list schedule")
 
     def authorize_retrieve(self, model_instance):
         resource_obj = model_instance.resource
