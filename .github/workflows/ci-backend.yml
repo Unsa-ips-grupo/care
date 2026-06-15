@@ -1,0 +1,34 @@
+name: CI Backend - CARE
+
+# Integracion Continua del backend de CARE
+# Valida la calidad del codigo Python con ruff en cada push y pull request
+on:
+  push:
+    branches: [ develop ]
+  pull_request:
+    branches: [ develop ]
+  workflow_dispatch:
+
+jobs:
+
+  # =========================================================
+  # JOB: Linter de codigo Python con ruff
+  # =========================================================
+  lint:
+    name: Lint Backend (ruff)
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Clonar repositorio
+        uses: actions/checkout@v4
+
+      - name: Configurar Python 3.13
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+
+      - name: Instalar ruff
+        run: pip install ruff
+
+      - name: Verificar calidad del codigo con ruff
+        run: ruff check .
