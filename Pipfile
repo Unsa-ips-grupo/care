@@ -34,7 +34,7 @@ json-fingerprint = "==0.14.1"
 jsonschema = "==4.25.1"
 pillow = "==12.2.0"
 psycopg = { extras = ["c"], version = "==3.3.2" }
-pydantic = "==2.12.5"
+pydantic = "==2.13.4"
 pyjwt = "==2.12.0"
 pyotp = "==2.9.0"
 python-slugify = "==8.0.4"
