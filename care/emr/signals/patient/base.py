@@ -2,7 +2,7 @@
 This is the base class to create patient identifiers based on patient attributes
 This allows workflows without strict Authz to function as needed
 """
-
+#modificando este codigo 
 from care.emr.models.patient import PatientIdentifier, PatientIdentifierConfig
 from care.emr.resources.patient_identifier.spec import (
     IdentifierConfig,
