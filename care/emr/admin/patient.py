@@ -31,6 +31,7 @@ class PatientResource(resources.ModelResource):
             "deceased_datetime",
             "blood_group",
             "geo_organization",
+            "CLASE",
         )
 
 
